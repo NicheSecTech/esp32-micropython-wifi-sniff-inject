@@ -35,6 +35,13 @@ ap = network.WLAN(network.AP_IF)
 ap.active(False)
 sta = network.WLAN(network.STA_IF)
 sta.active(False)
+## START SNIFFER
+sta.sniffer(ch=8)
+## STOP SNIFFER
+sta.sniffer_stop()
+
+## Configure your ESP32 with AP mode or set the channel with sniffer
+## first before doing injection.
 sta.sniffer(ch=8)
 sta.sniffer_stop()
 
@@ -47,8 +54,4 @@ while (count < 100):
 	sta.inject(buffer=buf,length=buf_len)
 	time.sleep(0.1)
 
-## Configure your ESP32 with AP mode or set the channel with sniffer
-## first before doing injection.
-sta.sniffer(ch=8)
-sta.sniffer_stop()
 
