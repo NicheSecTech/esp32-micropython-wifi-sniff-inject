@@ -1,5 +1,5 @@
 # esp32-micropython-wifi-sniff-inject
-esp32 build of micropython v1.12 using ESP-IDF v4.0 that support 802.11 sniffing and injection.
+esp32 build of micropython v1.12 using ESP-IDF v4.0 that supports 802.11 sniffing and injection.
 
 MicroPython v1.12.0 for ESP32 with 802.11 packet sniffing and injection.
 
