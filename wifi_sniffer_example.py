@@ -56,7 +56,7 @@ def read_wifi_packets():
 				except:
 					pass
 
-			# ### Example to print BEACONS (no name shown yet, just MAC addresses.)
+			# ### Example to print BEACONS
 			if (packet.fc_type == wifi.TYPE_MANAGEMENT) and (packet.fc_sub == wifi.TYPE_MANAGEMENT_BEACON):
 				tags = packet.decode_tags()
 				essid = tags[0][0].decode('utf-8')
